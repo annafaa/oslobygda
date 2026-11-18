@@ -798,3 +798,13 @@
   stad: Kaffistova, kjellaren
   merknad: ''
   bilete: /lutar/bilete/arr-cover.png
+
+- uid: pobb-2027-6da17b7ddb450cb4a4901057a1fd9992
+  registrering_id: 6da17b7ddb450cb4a4901057a1fd9992
+  dato: '2027-02-24'
+  start: '21:00'
+  slutt: '23:45'
+  tittel: Folkemusikkpøbb 24. februar
+  stad: Kaffistova, kjellaren
+  merknad: ''
+  bilete: /lutar/bilete/arr-cover.png
