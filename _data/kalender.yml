@@ -828,3 +828,13 @@
   stad: Kaffistova, kjellaren
   merknad: ''
   bilete: /lutar/bilete/arr-cover.png
+
+- uid: pobb-2027-cf04b36ddd9d046ee192d5d42d9f8541
+  registrering_id: cf04b36ddd9d046ee192d5d42d9f8541
+  dato: '2027-05-26'
+  start: '21:00'
+  slutt: '23:45'
+  tittel: Folkemusikkpøbb 26. mai
+  stad: Kaffistova, kjellaren
+  merknad: ''
+  bilete: /lutar/bilete/arr-cover.png
