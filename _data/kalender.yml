@@ -787,23 +787,14 @@
   stad: "Kaffistova, kjellaren"
   #lenkje: "/pub/"
   merknad: "Gratis inngang."
-  bilete: "/lutar/bilete/gamal-cover.png" 
-  
-  
-  
+  bilete: "/lutar/bilete/gamal-cover.png"
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+- uid: pobb-2027-6da4d355936d5e160e0d73e38d8737e8
+  registrering_id: 6da4d355936d5e160e0d73e38d8737e8
+  dato: '2027-01-27'
+  start: '21:00'
+  slutt: '23:45'
+  tittel: Folkemusikkpøbb 27. januar – DANS DANS DANS
+  stad: Kaffistova, kjellaren
+  merknad: ''
+  bilete: /lutar/bilete/arr-cover.png
