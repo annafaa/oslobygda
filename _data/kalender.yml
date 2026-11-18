@@ -808,3 +808,13 @@
   stad: Kaffistova, kjellaren
   merknad: ''
   bilete: /lutar/bilete/arr-cover.png
+
+- uid: pobb-2027-e6535ffb47e00b8ee77953b440137f23
+  registrering_id: e6535ffb47e00b8ee77953b440137f23
+  dato: '2027-03-31'
+  start: '21:00'
+  slutt: '23:45'
+  tittel: Folkemusikkpøbb 31. mars
+  stad: Kaffistova, kjellaren
+  merknad: ''
+  bilete: /lutar/bilete/arr-cover.png
