@@ -24,7 +24,7 @@ permalink: /api/tilskipingar.json
           "slutt": {{ e.slutt | default: "" | jsonify }},
           "tittel": {{ e.tittel | default: "" | jsonify }},
           "stad": {{ e.stad | default: "" | jsonify }},
-          "lenkje": {{ e.lenkje | default: "" | jsonify }},
+          "lenkje": {{ "/tilskipingar/" | append: e.uid | append: "/" | absolute_url | jsonify }},
           "merknad": {{ e.merknad | default: "" | jsonify }},
           "bilete": {{ e.bilete | default: "" | jsonify }}
         }

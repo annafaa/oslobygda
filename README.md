@@ -81,6 +81,17 @@ frå nettsidebygget. `_site/` er generert utdata og skal ikkje redigerast.
 
 ### Kalender
 
+Kvar tilskiping har ei eiga side på `/tilskipingar/<uid>/`, til dømes
+`https://oslobygda.no/tilskipingar/pobb-2026-09/`. Bruk desse URL-ane ved
+innlegging i Aktiv i Oslo. Sidene inneheld synleg arrangementsinformasjon og
+Schema.org Event-data, og blir lenkja frå kalenderen og kalenderabonnementet.
+Innhaldet blir henta direkte frå `_data/kalender.yml` under Jekyll-bygginga.
+
+Etter at du har lagt til nye tilskipingar, køyr `ruby skript/bygg_tilskipingssider.rb`.
+GitHub Actions gjer dette automatisk ved endringar i kalenderdata på main.
+Behald dei små sidefilene i `tilskipingar/` i Git; dei fungerer med vanleg
+GitHub Pages utan eigne Jekyll-programtillegg.
+
 Behald `uid` når ei tilskiping blir flytta eller endra; elles kan abonnentar
 få duplikat. Ved avlysing: behald rada og set `avlyst: true`. Behald historiske
 tilskipingar. `sluttdato` kan brukast for fleire dagar; sluttklokkeslett før start

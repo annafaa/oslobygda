@@ -1,0 +1,42 @@
+---
+layout: standard
+---
+{% assign e = site.data.kalender | where: 'uid', page.uid | first %}
+{% assign slutt = e.slutt | default: '22:00' %}
+{% assign start = e.start | default: '19:00' %}
+{% assign sluttdato = e.sluttdato | default: e.dato %}
+{% if e.sluttdato == nil and slutt <= start %}
+  {% assign neste_dag = e.dato | append: 'T12:00:00Z' | date: '%s' | plus: 86400 %}
+  {% assign sluttdato = neste_dag | date: '%Y-%m-%d' %}
+{% endif %}
+{% capture starttid %}{{ e.dato }}T{{ start }}:00{% endcapture %}
+{% capture sluttid %}{{ sluttdato }}T{{ slutt }}:00{% endcapture %}
+{% assign bilete = e.bilete | default: '/lutar/bilete/arr-cover.png' %}
+<article>
+  <p><a href="{{ '/kalender/' | relative_url }}">← Alle tilskipingar</a></p>
+  <h1>{{ e.tittel | escape }}</h1>
+  {% if e.avlyst or e.tittel contains 'AVLYST' %}<p><strong>Tilskipinga er avlyst.</strong></p>{% endif %}
+  <p><strong>Dato:</strong> <time datetime="{{ starttid }}">{{ e.dato | date: '%d.%m.%Y' }} kl. {{ start }}</time> – <time datetime="{{ sluttid }}">{% if sluttdato != e.dato %}{{ sluttdato | date: '%d.%m.%Y' }} kl. {% endif %}{{ slutt }}</time> (Oslo-tid)</p>
+  {% if e.stad %}<p><strong>Stad:</strong> {{ e.stad | escape }}</p>{% endif %}
+  <p><strong>Arrangør:</strong> Oslobygda kulturlag</p>
+  {% if e.merknad %}<p>{{ e.merknad | escape | newline_to_br }}</p>{% endif %}
+  {% if e.lenkje %}<p><a href="{{ e.lenkje | relative_url | escape }}">Meir informasjon</a></p>{% endif %}
+  <img src="{{ bilete | relative_url }}" alt="{{ e.tittel | escape }}" style="display:block;max-width:100%;height:auto;">
+</article>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": {{ e.tittel | jsonify }},
+  "description": {{ e.merknad | default: e.tittel | jsonify }},
+  "url": {{ page.url | absolute_url | jsonify }},
+  "startDate": {{ starttid | jsonify }},
+  "endDate": {{ sluttid | jsonify }},
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/{% if e.avlyst or e.tittel contains 'AVLYST' %}EventCancelled{% else %}EventScheduled{% endif %}",
+  "location": {"@type": "Place", "name": {{ e.stad | default: 'Oslo' | jsonify }}},
+  "image": {{ bilete | absolute_url | jsonify }},
+  "organizer": {"@type": "Organization", "name": "Oslobygda kulturlag", "url": {{ '/' | absolute_url | jsonify }}}
+  {% if e.merknad contains 'Gratis inngang' %},"isAccessibleForFree": true{% endif %}
+}
+</script>
