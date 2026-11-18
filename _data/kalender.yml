@@ -818,3 +818,13 @@
   stad: Kaffistova, kjellaren
   merknad: ''
   bilete: /lutar/bilete/arr-cover.png
+
+- uid: pobb-2027-ce2c8dcbcd78c48349637fa30b15f5e7
+  registrering_id: ce2c8dcbcd78c48349637fa30b15f5e7
+  dato: '2027-04-28'
+  start: '21:00'
+  slutt: '23:45'
+  tittel: Folkemusikkpøbb 28. april
+  stad: Kaffistova, kjellaren
+  merknad: ''
+  bilete: /lutar/bilete/arr-cover.png
