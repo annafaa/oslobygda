@@ -12,16 +12,46 @@ layout: standard
 {% capture starttid %}{{ e.dato }}T{{ start }}:00{% endcapture %}
 {% capture sluttid %}{{ sluttdato }}T{{ slutt }}:00{% endcapture %}
 {% assign bilete = e.bilete | default: '/lutar/bilete/arr-cover.png' %}
-<article>
-  <p><a href="{{ '/kalender/' | relative_url }}">← Alle tilskipingar</a></p>
-  <h1>{{ e.tittel | escape }}</h1>
-  {% if e.avlyst or e.tittel contains 'AVLYST' %}<p><strong>Tilskipinga er avlyst.</strong></p>{% endif %}
-  <p><strong>Dato:</strong> <time datetime="{{ starttid }}">{{ e.dato | date: '%d.%m.%Y' }} kl. {{ start }}</time> – <time datetime="{{ sluttid }}">{% if sluttdato != e.dato %}{{ sluttdato | date: '%d.%m.%Y' }} kl. {% endif %}{{ slutt }}</time> (Oslo-tid)</p>
-  {% if e.stad %}<p><strong>Stad:</strong> {{ e.stad | escape }}</p>{% endif %}
-  <p><strong>Arrangør:</strong> Oslobygda kulturlag</p>
-  {% if e.merknad %}<p>{{ e.merknad | escape | newline_to_br }}</p>{% endif %}
-  {% if e.lenkje %}<p><a href="{{ e.lenkje | relative_url | escape }}">Meir informasjon</a></p>{% endif %}
-  <img src="{{ bilete | relative_url }}" alt="{{ e.tittel | escape }}" style="display:block;max-width:100%;height:auto;">
+{% capture manad %}{% include no-month.html date=e.dato %}{% endcapture %}
+<article class="tilskiping" aria-labelledby="tilskiping-tittel">
+  <a class="tilskiping__tilbake" href="{{ '/kalender/' | relative_url }}"><span aria-hidden="true">←</span> Alle tilskipingar</a>
+  <div class="tilskiping__plakat">
+    <img class="tilskiping__bilete" src="{{ bilete | relative_url }}" alt="{{ e.tittel | escape }}" fetchpriority="high">
+    <header class="tilskiping__topp">
+      <div class="tilskiping__datomerke" aria-hidden="true">
+        <span class="tilskiping__dag">{{ e.dato | date: '%-d' }}</span>
+        <span>{{ manad | strip }}</span>
+        <span class="tilskiping__aar">{{ e.dato | date: '%Y' }}</span>
+      </div>
+      <div>
+        <p class="framside__overtekst">Oslobygda kulturlag inviterer</p>
+        <h1 id="tilskiping-tittel">{{ e.tittel | escape }}</h1>
+        {% if e.avlyst or e.tittel contains 'AVLYST' %}
+          <p class="tilskiping__merke tilskiping__merke--avlyst">Tilskipinga er avlyst</p>
+        {% elsif e.merknad contains 'Gratis inngang' %}
+          <p class="tilskiping__merke">Gratis inngang</p>
+        {% endif %}
+      </div>
+    </header>
+  </div>
+  <div class="tilskiping__detaljar">
+    <section class="tilskiping__omtale" aria-labelledby="tilskiping-om">
+      <p class="framside__overtekst">Me møtest i Oslobygda</p>
+      <h2 id="tilskiping-om">Om tilskipinga</h2>
+      {% if e.merknad %}<p>{{ e.merknad | escape | newline_to_br }}</p>{% endif %}
+      {% if e.lenkje %}<p><a href="{{ e.lenkje | relative_url | escape }}">Meir informasjon <span aria-hidden="true">↗</span></a></p>{% endif %}
+      <a class="tilskiping__kalenderlenkje" href="{{ '/kalender/' | relative_url }}#kalenderabonnement-tittel">Abonner på kalenderen <span aria-hidden="true">→</span></a>
+    </section>
+    <section class="tilskiping__praktisk" aria-labelledby="tilskiping-praktisk">
+      <h2 id="tilskiping-praktisk">Tid og stad</h2>
+      <dl>
+        <div><dt>Dato</dt><dd><time datetime="{{ e.dato }}">{{ e.dato | date: '%-d' }}. {{ manad | strip }} {{ e.dato | date: '%Y' }}</time></dd></div>
+        <div><dt>Klokkeslett</dt><dd><time datetime="{{ starttid }}">{{ start }}</time> – <time datetime="{{ sluttid }}">{% if sluttdato != e.dato %}{{ sluttdato | date: '%d.%m.%Y' }} kl. {% endif %}{{ slutt }}</time><span class="tilskiping__tidssone">Oslo-tid</span></dd></div>
+        {% if e.stad %}<div><dt>Stad</dt><dd>{{ e.stad | escape }}</dd></div>{% endif %}
+        <div><dt>Arrangør</dt><dd><a href="{{ '/om/' | relative_url }}">Oslobygda kulturlag</a></dd></div>
+      </dl>
+    </section>
+  </div>
 </article>
 <script type="application/ld+json">
 {

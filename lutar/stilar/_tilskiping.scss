@@ -1,0 +1,34 @@
+/* Tilskipingssider: same plakatpreg og palett som framsida. */
+.tilskiping { margin: 1.5rem 0 3rem; }
+.tilskiping__tilbake { display: inline-flex; gap: .6rem; margin-bottom: 1.2rem; font-size: .9rem; text-underline-offset: .25em; }
+.tilskiping__plakat { overflow: hidden; background: #203e30; color: var(--bg); box-shadow: 0 10px 30px rgba(18,17,14,.1); }
+.tilskiping__bilete { display: block; width: 100%; height: auto; }
+.tilskiping__topp { display: grid; grid-template-columns: 112px minmax(0,1fr); gap: clamp(1.2rem, 4vw, 2.5rem); padding: clamp(1.3rem, 4vw, 2.5rem); border-top: 6px solid var(--accent2); align-items: start; }
+.tilskiping__topp h1 { font: 650 clamp(1.9rem, 4.5vw, 3.1rem)/1.12 var(--serif); letter-spacing: -.025em; margin: .65rem 0 1rem; overflow-wrap: anywhere; }
+.tilskiping__topp .framside__overtekst { color: #d6e5d5; }
+.tilskiping__datomerke { display: flex; flex-direction: column; align-items: center; padding: 1rem .5rem; background: var(--kort1); color: #17291f; text-align: center; line-height: 1.3; font-weight: 650; }
+.tilskiping__dag { font: 650 3.7rem/1 var(--serif); margin-bottom: .4rem; }
+.tilskiping__aar { font-size: .8rem; margin-top: .35rem; }
+.tilskiping__merke { display: inline-block; margin: 0; padding: .3rem .75rem; background: var(--accent3); color: #17291f; font-size: .85rem; font-weight: 700; }
+.tilskiping__merke--avlyst { background: var(--accent2); }
+.tilskiping__detaljar { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,.85fr); gap: clamp(1.5rem, 5vw, 3rem); margin-top: 2rem; align-items: start; }
+.tilskiping__detaljar h2 { font: 650 1.8rem/1.2 var(--serif); margin: .5rem 0 1rem; }
+.tilskiping__omtale { padding: .6rem 0; }
+.tilskiping__omtale > p:not(.framside__overtekst) { font-size: 1.1rem; }
+.tilskiping__kalenderlenkje { display: inline-block; margin-top: 1rem; font-weight: 650; text-underline-offset: .25em; }
+.tilskiping__praktisk { padding: 1.3rem 1.5rem; background: var(--accent4); border-top: 4px solid #203e30; }
+.tilskiping__praktisk h2 { margin-top: 0; }
+.tilskiping__praktisk dl { margin: 0; }
+.tilskiping__praktisk dl > div { padding: .75rem 0; border-top: 1px solid var(--line); }
+.tilskiping__praktisk dt { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; margin-bottom: .2rem; }
+.tilskiping__praktisk dd { margin: 0; overflow-wrap: anywhere; }
+.tilskiping__tidssone { display: block; font-size: .8rem; }
+.tilskiping a:focus-visible { outline: 3px solid #203e30; outline-offset: 4px; }
+@media (max-width: 599px) {
+  .tilskiping__topp { grid-template-columns: 74px minmax(0,1fr); gap: 1rem; padding: 1.2rem 1rem; }
+  .tilskiping__dag { font-size: 2.8rem; }
+  .tilskiping__datomerke { font-size: .8rem; }
+  .tilskiping__topp h1 { font-size: clamp(1.5rem, 6vw, 2rem); }
+  .tilskiping__topp .framside__overtekst { font-size: .65rem; }
+  .tilskiping__detaljar { grid-template-columns: 1fr; gap: 1.5rem; margin-top: 1.5rem; }
+}
