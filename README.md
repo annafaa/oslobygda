@@ -81,6 +81,11 @@ frå nettsidebygget. `_site/` er generert utdata og skal ikkje redigerast.
 
 ### Kalender
 
+Utan høveleg bilete: set `bilete: ""` eller vel «Tekstplakat utan bilete» i
+tilskipingsskjemaet. Då får kalenderkortet og tilskipingssida ei einsfarga
+plakatflate med tittelen i Fraunces. Årsmøte får kortteksten «Årsmøte».
+Tekstplakaten er HTML/CSS; ved deling blir det vanlege Oslobygda-biletet brukt.
+
 Kvar tilskiping har ei eiga side på `/tilskipingar/<uid>/`, til dømes
 `https://oslobygda.no/tilskipingar/pobb-2026-09/`. Bruk desse URL-ane ved
 innlegging i Aktiv i Oslo. Sidene inneheld synleg arrangementsinformasjon og

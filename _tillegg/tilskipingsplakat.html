@@ -1,0 +1,12 @@
+{%- assign plakat = include.event -%}
+{%- assign plakattekst = plakat.tittel -%}
+{%- assign liten_tittel = plakat.tittel | downcase -%}
+{%- if liten_tittel contains 'årsmøte' -%}
+  {%- assign plakattekst = 'Årsmøte' -%}
+{%- endif -%}
+<div class="tekstplakat" aria-hidden="true">
+  <div class="tekstplakat__innhald">
+    <span class="tekstplakat__tekst">{{ plakattekst | escape }}</span>
+    <span class="tekstplakat__avsender">Oslobygda kulturlag</span>
+  </div>
+</div>

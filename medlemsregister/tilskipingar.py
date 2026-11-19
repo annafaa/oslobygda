@@ -18,7 +18,7 @@ import yaml
 
 FILE_PATH = '_data/kalender.yml'
 KINDS = {'pobb':'Folkemusikkpøbb', 'kved':'Kvedarkrok', 'kviss':'Kviss', 'anna':'Anna tilskiping'}
-IMAGES = {'/lutar/bilete/arr-cover.png', '/lutar/bilete/gamal-cover.png'}
+IMAGES = {'', '/lutar/bilete/arr-cover.png', '/lutar/bilete/gamal-cover.png'}
 
 
 class CalendarError(RuntimeError):

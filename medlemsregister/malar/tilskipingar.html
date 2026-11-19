@@ -30,7 +30,7 @@
   <div class="felt"><label for="place">Stad</label><input id="place" name="stad" value="{{ values.get('stad','') }}" maxlength="200" required></div>
   <div class="felt"><label for="description">Omtale</label><textarea id="description" name="merknad" maxlength="3000" rows="5">{{ values.get('merknad','') }}</textarea></div>
   <div class="felt"><label for="link">Lenkje (valfri)</label><input id="link" name="lenkje" value="{{ values.get('lenkje','') }}" placeholder="/pub/ eller https://…"></div>
-  <div class="felt"><label for="image">Bilete</label><select id="image" name="bilete"><option value="/lutar/bilete/arr-cover.png">Vanleg arrangementsbilete</option><option value="/lutar/bilete/gamal-cover.png" {% if values.get('bilete')=='/lutar/bilete/gamal-cover.png' %}selected{% endif %}>Eldre arrangementsbilete</option></select></div>
+  <div class="felt"><label for="image">Bilete</label><select id="image" name="bilete"><option value="" {% if values.get('bilete') == '' %}selected{% endif %}>Tekstplakat utan bilete (t.d. Årsmøte)</option><option value="/lutar/bilete/arr-cover.png">Vanleg arrangementsbilete</option><option value="/lutar/bilete/gamal-cover.png" {% if values.get('bilete')=='/lutar/bilete/gamal-cover.png' %}selected{% endif %}>Eldre arrangementsbilete</option></select></div>
   <p>Opplysningane blir offentlege når du publiserer.</p>
   <button type="submit" {% if not ready %}disabled{% endif %}>{{ 'Lagre endringane' if editing else 'Publiser tilskipinga' }}</button>
 </form>

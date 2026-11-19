@@ -18,6 +18,9 @@ class CalendarTests(unittest.TestCase):
         for change in ({'kind':'styret'},{'dato':'2026-02-30'},{'tittel':''},{'lenkje':'javascript:alert(1)'},{'lenkje':'//bad.example'},{'bilete':'https://bad.example/x.png'},{'sluttdato':'2026-11-17'}):
             with self.assertRaises(ValueError): self.event(**change)
 
+    def test_text_poster_without_image(self):
+        self.assertEqual(self.event(bilete="")["bilete"], "")
+
     def test_append_preserves_source_and_retries_concurrent_update(self):
         client=GithubCalendar('test-token')
         original='# original comment\n- uid: old\n  dato: "2026-01-01"\n'

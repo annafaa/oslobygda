@@ -87,7 +87,7 @@
     {%- capture mnd -%}{%- include no-month.html date=e.dato -%}{%- endcapture -%}
     {%- assign dag = e.dato | date: "%-d" -%}
     {%- assign aar = e.dato | date: "%Y" -%}
-{%- assign bilete = e.bilete | default: "/lutar/bilete/arr-cover.png" -%}
+{%- assign bilete = e.bilete -%}
 
     {%- assign dato_ymd = e.dato | date: "%Y%m%d" -%}
     {%- assign start_hhmm = e.start | default: "19:00" | remove: ":" -%}
@@ -115,12 +115,20 @@
       {% if e.uid %}
   <a class="kalenderkort__bilete-lenkje" href="{{ tilskipingslenkje | relative_url | escape }}">
     <div class="kalenderkort__bilete" aria-hidden="true">
+      {% if bilete and bilete != empty %}
       <img class="kalenderkort__bilete-img" src="{{ bilete | relative_url | escape }}" alt="" loading="lazy" decoding="async">
+      {% else %}
+        {% include tilskipingsplakat.html event=e %}
+      {% endif %}
     </div>
   </a>
 {% else %}
   <div class="kalenderkort__bilete" aria-hidden="true">
-    <img class="kalenderkort__bilete-img" src="{{ bilete | relative_url | escape }}" alt="" loading="lazy" decoding="async">
+    {% if bilete and bilete != empty %}
+      <img class="kalenderkort__bilete-img" src="{{ bilete | relative_url | escape }}" alt="" loading="lazy" decoding="async">
+      {% else %}
+        {% include tilskipingsplakat.html event=e %}
+      {% endif %}
   </div>
 {% endif %}
 
