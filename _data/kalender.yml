@@ -687,7 +687,7 @@
   stad: "Kaffistova, kjellaren"
   #lenkje: "/pub/"
   merknad: "Gratis inngang. Pandemi-tiltak"
-  bilete: "/lutar/bilete/kviss-cover.png" 
+  bilete: ""
   
 - uid: "kviss-2022-02"
   dato: "2022-01-19"
@@ -697,7 +697,7 @@
   stad: "Kaffistova, kjellaren"
   #lenkje: "/pub/"
   merknad: "Gratis inngang. Pandemi-tiltak"
-  bilete: "/lutar/bilete/kviss-cover.png" 
+  bilete: ""
   
 - uid: "kviss-2022-03"
   dato: "2022-01-12"
@@ -707,7 +707,7 @@
   stad: "Kaffistova, kjellaren"
   #lenkje: "/pub/"
   merknad: "Gratis inngang. Pandemi-tiltak"
-  bilete: "/lutar/bilete/kviss-cover.png" 
+  bilete: ""
   
 - uid: "pobb-2021-01"
   dato: "2021-10-06"

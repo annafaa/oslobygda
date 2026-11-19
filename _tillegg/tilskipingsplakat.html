@@ -3,6 +3,8 @@
 {%- assign liten_tittel = plakat.tittel | downcase -%}
 {%- if liten_tittel contains 'årsmøte' -%}
   {%- assign plakattekst = 'Årsmøte' -%}
+{%- elsif liten_tittel contains 'kviss' -%}
+  {%- assign plakattekst = 'Kviss' -%}
 {%- endif -%}
 <div class="tekstplakat" aria-hidden="true">
   <div class="tekstplakat__innhald">
