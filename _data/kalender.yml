@@ -1,4 +1,5 @@
 - uid: "pobb-2026-09"
+  slug: pobb-2026-november
   dato: "2026-11-18"
   start: "21:00"
   slutt: "23:45"
@@ -9,6 +10,7 @@
   bilete: "/lutar/bilete/arr-cover.png"
 
 - uid: "pobb-2026-08"
+  slug: pobb-2026-oktober
   dato: "2026-10-21"
   start: "21:00"
   slutt: "23:45"
@@ -19,6 +21,7 @@
   bilete: "/lutar/bilete/arr-cover.png"
 
 - uid: "pobb-2026-07"
+  slug: pobb-2026-september
   dato: "2026-09-23"
   start: "21:00"
   slutt: "23:45"
@@ -29,6 +32,7 @@
   bilete: "/lutar/bilete/arr-cover.png"
 
 - uid: "pobb-2026-06"
+  slug: pobb-2026-august
   dato: "2026-08-26"
   start: "21:00"
   slutt: "23:45"
@@ -39,6 +43,7 @@
   bilete: "/lutar/bilete/arr-cover.png"
 
 - uid: "pobb-2026-05"
+  slug: pobb-2026-mai
   dato: "2026-05-27"
   start: "21:00"
   slutt: "23:45"
@@ -49,6 +54,7 @@
   bilete: "/lutar/bilete/arr-cover.png"
 
 - uid: "pobb-2026-04"
+  slug: pobb-2026-april
   dato: "2026-04-29"
   start: "21:00"
   slutt: "23:45"
@@ -59,6 +65,7 @@
   bilete: "/lutar/bilete/arr-cover.png"
   
 - uid: "pobb-2026-03"
+  slug: pobb-2026-mars
   dato: "2026-03-25"
   start: "21:00"
   slutt: "23:45"
@@ -69,6 +76,7 @@
   bilete: "/lutar/bilete/arr-cover.png"
   
 - uid: "pobb-2026-02"
+  slug: pobb-2026-februar
   dato: "2026-02-25"
   start: "21:00"
   slutt: "23:45"
@@ -79,6 +87,7 @@
   bilete: "/lutar/bilete/arr-cover.png"
   
 - uid: "pobb-2026-01"
+  slug: pobb-2026-januar
   dato: "2026-01-28"
   start: "21:00"
   slutt: "23:45"
@@ -89,6 +98,7 @@
   bilete: "/lutar/bilete/arr-cover.png"
   
 - uid: "pobb-2025-09"
+  slug: pobb-2025-november
   dato: "2025-11-12"
   start: "21:00"
   slutt: "23:45"
@@ -99,6 +109,7 @@
   bilete: "/lutar/bilete/arr-cover.png"
   
 - uid: "pobb-2025-08"
+  slug: pobb-2025-oktober
   dato: "2025-10-22"
   start: "21:00"
   slutt: "23:45"
@@ -109,6 +120,7 @@
   bilete: "/lutar/bilete/arr-cover.png"
   
 - uid: "pobb-2025-07"
+  slug: pobb-2025-september
   dato: "2025-09-24"
   start: "21:00"
   slutt: "23:45"
@@ -119,6 +131,7 @@
   bilete: "/lutar/bilete/arr-cover.png"
   
 - uid: "pobb-2025-06"
+  slug: pobb-2025-august
   dato: "2025-08-27"
   start: "21:00"
   slutt: "23:45"
@@ -129,6 +142,7 @@
   bilete: "/lutar/bilete/arr-cover.png"
   
 - uid: "pobb-2025-05"
+  slug: pobb-2025-mai
   dato: "2025-05-21"
   start: "21:00"
   slutt: "23:45"
@@ -139,6 +153,7 @@
   bilete: "/lutar/bilete/arr-cover.png"
   
 - uid: "pobb-2025-04"
+  slug: pobb-2025-april
   dato: "2025-04-23"
   start: "21:00"
   slutt: "23:45"
@@ -149,6 +164,7 @@
   bilete: "/lutar/bilete/arr-cover.png"
   
 - uid: "pobb-2025-03"
+  slug: pobb-2025-mars
   dato: "2025-03-26"
   start: "21:00"
   slutt: "23:45"
@@ -159,6 +175,7 @@
   bilete: "/lutar/bilete/arr-cover.png"
   
 - uid: "pobb-2025-02"
+  slug: pobb-2025-februar
   dato: "2025-02-26"
   start: "21:00"
   slutt: "23:45"
@@ -169,6 +186,7 @@
   bilete: "/lutar/bilete/arr-cover.png"
   
 - uid: "pobb-2025-01"
+  slug: pobb-2025-januar
   dato: "2025-01-29"
   start: "21:00"
   slutt: "23:45"
@@ -179,6 +197,7 @@
   bilete: "/lutar/bilete/arr-cover.png"
   
 - uid: "pobb-2024-09"
+  slug: pobb-2024-november
   dato: "2024-11-13"
   start: "21:00"
   slutt: "23:45"
@@ -189,6 +208,7 @@
   bilete: "/lutar/bilete/arr-cover.png"
   
 - uid: "pobb-2024-08"
+  slug: pobb-2024-oktober
   dato: "2024-10-30"
   start: "21:00"
   slutt: "23:45"
@@ -199,6 +219,7 @@
   bilete: "/lutar/bilete/arr-cover.png"
   
 - uid: "pobb-2024-07"
+  slug: pobb-2024-september
   dato: "2024-09-25"
   start: "21:00"
   slutt: "23:45"
@@ -209,6 +230,7 @@
   bilete: "/lutar/bilete/arr-cover.png"
   
 - uid: "pobb-2024-06"
+  slug: pobb-2024-august
   dato: "2024-08-28"
   start: "21:00"
   slutt: "23:45"
@@ -219,6 +241,7 @@
   bilete: "/lutar/bilete/arr-cover.png"
   
 - uid: "pobb-2024-05"
+  slug: pobb-2024-mai
   dato: "2024-05-29"
   start: "21:00"
   slutt: "23:45"
@@ -229,6 +252,7 @@
   bilete: "/lutar/bilete/arr-cover.png"
   
 - uid: "pobb-2024-04"
+  slug: pobb-2024-april
   dato: "2024-04-28"
   start: "21:00"
   slutt: "23:45"
@@ -239,6 +263,7 @@
   bilete: "/lutar/bilete/arr-cover.png"
   
 - uid: "pobb-2024-03"
+  slug: pobb-2024-mars
   dato: "2024-03-20"
   start: "21:00"
   slutt: "23:45"
@@ -249,6 +274,7 @@
   bilete: "/lutar/bilete/arr-cover.png"
   
 - uid: "pobb-2024-02"
+  slug: pobb-2024-februar
   dato: "2024-02-28"
   start: "21:00"
   slutt: "23:45"
@@ -259,6 +285,7 @@
   bilete: "/lutar/bilete/arr-cover.png"
   
 - uid: "pobb-2024-01"
+  slug: pobb-2024-januar
   dato: "2024-01-31"
   start: "21:00"
   slutt: "23:45"
@@ -269,6 +296,7 @@
   bilete: "/lutar/bilete/arr-cover.png"
 
 - uid: "pobb-2023-09"
+  slug: pobb-2023-november
   dato: "2023-11-15"
   start: "21:00"
   slutt: "23:45"
@@ -279,6 +307,7 @@
   bilete: "/lutar/bilete/arr-cover.png"
   
 - uid: "pobb-2023-08"
+  slug: pobb-2023-oktober
   dato: "2023-10-25"
   start: "21:00"
   slutt: "23:45"
@@ -289,6 +318,7 @@
   bilete: "/lutar/bilete/arr-cover.png"
   
 - uid: "pobb-2023-07"
+  slug: pobb-2023-september
   dato: "2023-09-27"
   start: "21:00"
   slutt: "23:45"
@@ -299,6 +329,7 @@
   bilete: "/lutar/bilete/arr-cover.png"
   
 - uid: "pobb-2023-06"
+  slug: pobb-2023-august
   dato: "2023-08-30"
   start: "21:00"
   slutt: "23:45"
@@ -309,6 +340,7 @@
   bilete: "/lutar/bilete/arr-cover.png"
   
 - uid: "pobb-2023-05"
+  slug: pobb-2023-mai
   dato: "2023-05-31"
   start: "21:00"
   slutt: "23:45"
@@ -319,6 +351,7 @@
   bilete: "/lutar/bilete/arr-cover.png"
   
 - uid: "pobb-2023-04"
+  slug: pobb-2023-april
   dato: "2023-04-26"
   start: "21:00"
   slutt: "23:45"
@@ -329,6 +362,7 @@
   bilete: "/lutar/bilete/arr-cover.png"
   
 - uid: "pobb-2023-03"
+  slug: pobb-2023-mars-29
   dato: "2023-03-29"
   start: "21:00"
   slutt: "23:45"
@@ -339,6 +373,7 @@
   bilete: "/lutar/bilete/arr-cover.png"
   
 - uid: "pobb-2023-02"
+  slug: pobb-2023-mars-3
   dato: "2023-03-03"
   start: "21:00"
   slutt: "23:45"
@@ -349,6 +384,7 @@
   bilete: "/lutar/bilete/arr-cover.png"
   
 - uid: "pobb-2023-01"
+  slug: pobb-2023-januar
   dato: "2023-01-25"
   start: "21:00"
   slutt: "23:45"
@@ -359,6 +395,7 @@
   bilete: "/lutar/bilete/arr-cover.png"
   
 - uid: "pobb-2022-24"
+  slug: pobb-2022-november
   dato: "2022-11-30"
   start: "21:00"
   slutt: "23:45"
@@ -369,6 +406,7 @@
   bilete: "/lutar/bilete/arr-cover.png"
   
 - uid: "pobb-2022-23"
+  slug: pobb-2022-oktober
   dato: "2022-10-26"
   start: "21:00"
   slutt: "23:45"
@@ -379,6 +417,7 @@
   bilete: "/lutar/bilete/arr-cover.png"
   
 - uid: "pobb-2022-22"
+  slug: pobb-2022-august-31
   dato: "2022-08-31"
   start: "21:00"
   slutt: "23:45"
@@ -389,6 +428,7 @@
   bilete: "/lutar/bilete/arr-cover.png"
   
 - uid: "pobb-2022-21"
+  slug: pobb-2022-august-31-2
   dato: "2022-08-31"
   start: "21:00"
   slutt: "23:45"
@@ -399,6 +439,7 @@
   bilete: "/lutar/bilete/arr-cover.png"
   
 - uid: "kved-2022-02"
+  slug: kved-2022-oktober
   dato: "2022-10-26"
   start: "20:00"
   slutt: "21:00"
@@ -409,6 +450,7 @@
   bilete: "/lutar/bilete/kvedarkrok.png"
   
 - uid: "kved-2022-01"
+  slug: kved-2022-september
   dato: "2022-09-28"
   start: "20:00"
   slutt: "21:00"
@@ -419,6 +461,7 @@
   bilete: "/lutar/bilete/kvedarkrok.png"
   
 - uid: "kved-2022-03"
+  slug: kved-2022-april-27
   dato: "2022-04-27"
   start: "20:00"
   slutt: "21:00"
@@ -429,6 +472,7 @@
   bilete: "/lutar/bilete/kvedarkrok.png"
   
 - uid: "kved-2022-04"
+  slug: kved-2022-april-4
   dato: "2022-04-04"
   start: "20:00"
   slutt: "21:00"
@@ -439,6 +483,7 @@
   bilete: "/lutar/bilete/kvedarkrok.png"
   
 - uid: "kved-2022-05"
+  slug: kved-2022-mars-16
   dato: "2022-03-16"
   start: "20:00"
   slutt: "21:00"
@@ -449,6 +494,7 @@
   bilete: "/lutar/bilete/kvedarkrok.png"
   
 - uid: "kved-2022-06"
+  slug: kved-2022-mars-9
   dato: "2022-03-09"
   start: "20:00"
   slutt: "21:00"
@@ -459,6 +505,7 @@
   bilete: "/lutar/bilete/kvedarkrok.png"
   
 - uid: "kved-2022-07"
+  slug: kved-2022-mars-2
   dato: "2022-03-02"
   start: "20:00"
   slutt: "21:00"
@@ -469,6 +516,7 @@
   bilete: "/lutar/bilete/kvedarkrok.png"
   
 - uid: "kved-2022-08"
+  slug: kved-2022-februar
   dato: "2022-02-09"
   start: "20:00"
   slutt: "21:00"
@@ -479,6 +527,7 @@
   bilete: "/lutar/bilete/kvedarkrok.png"
   
 - uid: "pobb-2022-20"
+  slug: pobb-2022-juni
   dato: "2022-06-01"
   start: "20:00"
   slutt: "23:45"
@@ -489,6 +538,7 @@
   bilete: "/lutar/bilete/gamal-cover.png"
   
 - uid: "pobb-2022-19"
+  slug: pobb-2022-mai-25
   dato: "2022-05-25"
   start: "20:00"
   slutt: "23:45"
@@ -499,6 +549,7 @@
   bilete: "/lutar/bilete/gamal-cover.png"
   
 - uid: "pobb-2022-18"
+  slug: pobb-2022-mai-18
   dato: "2022-05-18"
   start: "20:00"
   slutt: "23:45"
@@ -509,6 +560,7 @@
   bilete: "/lutar/bilete/gamal-cover.png" 
 
 - uid: "pobb-2022-17"
+  slug: pobb-2022-mai-11
   dato: "2022-05-11"
   start: "20:00"
   slutt: "23:45"
@@ -519,6 +571,7 @@
   bilete: "/lutar/bilete/gamal-cover.png" 
   
 - uid: "pobb-2022-16"
+  slug: pobb-2022-mai-4
   dato: "2022-05-04"
   start: "20:00"
   slutt: "23:45"
@@ -529,6 +582,7 @@
   bilete: "/lutar/bilete/gamal-cover.png" 
   
 - uid: "pobb-2022-15"
+  slug: pobb-2022-april-27
   dato: "2022-04-27"
   start: "20:00"
   slutt: "23:45"
@@ -539,6 +593,7 @@
   bilete: "/lutar/bilete/gamal-cover.png" 
    
 - uid: "pobb-2022-14"
+  slug: pobb-2022-april-20
   dato: "2022-04-20"
   start: "20:00"
   slutt: "23:45"
@@ -549,6 +604,7 @@
   bilete: "/lutar/bilete/gamal-cover.png"
   
 - uid: "pobb-2022-13"
+  slug: pobb-2022-april-6
   dato: "2022-04-06"
   start: "20:00"
   slutt: "23:45"
@@ -559,6 +615,7 @@
   bilete: "/lutar/bilete/gamal-cover.png"   
   
 - uid: "pobb-2022-12"
+  slug: pobb-2022-mars-30
   dato: "2022-03-30"
   start: "20:00"
   slutt: "23:45"
@@ -569,6 +626,7 @@
   bilete: "/lutar/bilete/gamal-cover.png" 
   
 - uid: "pobb-2022-11"
+  slug: pobb-2022-mars-23
   dato: "2022-03-23"
   start: "20:00"
   slutt: "23:45"
@@ -579,6 +637,7 @@
   bilete: "/lutar/bilete/gamal-cover.png" 
   
 - uid: "pobb-2022-10"
+  slug: pobb-2022-mars-16
   dato: "2022-03-16"
   start: "20:00"
   slutt: "23:45"
@@ -589,6 +648,7 @@
   bilete: "/lutar/bilete/gamal-cover.png" 
   
 - uid: "pobb-2022-09"
+  slug: pobb-2022-mars-9
   dato: "2022-03-09"
   start: "20:00"
   slutt: "23:45"
@@ -599,6 +659,7 @@
   bilete: "/lutar/bilete/gamal-cover.png"  
 
 - uid: "pobb-2022-08"
+  slug: pobb-2022-mars-2
   dato: "2022-03-02"
   start: "20:00"
   slutt: "23:45"
@@ -609,6 +670,7 @@
   bilete: "/lutar/bilete/gamal-cover.png" 
   
 - uid: "pobb-2022-07"
+  slug: pobb-2022-februar-23
   dato: "2022-02-23"
   start: "20:00"
   slutt: "23:45"
@@ -619,6 +681,7 @@
   bilete: "/lutar/bilete/gamal-cover.png" 
 
 - uid: "pobb-2022-06"
+  slug: pobb-2022-februar-16
   dato: "2022-02-16"
   start: "20:00"
   slutt: "23:45"
@@ -629,6 +692,7 @@
   bilete: "/lutar/bilete/gamal-cover.png" 
   
 - uid: "pobb-2022-05"
+  slug: pobb-2022-februar-9
   dato: "2022-02-09"
   start: "20:00"
   slutt: "23:45"
@@ -639,6 +703,7 @@
   bilete: "/lutar/bilete/gamal-cover.png" 
   
 - uid: "pobb-2022-04"
+  slug: pobb-2022-februar-2
   dato: "2022-02-02"
   start: "20:00"
   slutt: "23:45"
@@ -649,6 +714,7 @@
   bilete: "/lutar/bilete/gamal-cover.png" 
   
 - uid: "pobb-2022-03"
+  slug: pobb-2022-januar-26
   dato: "2022-01-26"
   start: "20:00"
   slutt: "23:45"
@@ -659,6 +725,7 @@
   bilete: "/lutar/bilete/gamal-cover.png" 
   
 - uid: "pobb-2022-02"
+  slug: pobb-2022-januar-19
   dato: "2022-01-19"
   start: "20:00"
   slutt: "23:45"
@@ -669,6 +736,7 @@
   bilete: "/lutar/bilete/gamal-cover.png" 
   
 - uid: "pobb-2022-01"
+  slug: pobb-2022-januar-12
   dato: "2022-01-12"
   start: "20:00"
   slutt: "23:45"
@@ -680,6 +748,7 @@
 
   
 - uid: "kviss-2022-01"
+  slug: kviss-2022-januar-26
   dato: "2022-01-26"
   start: "20:00"
   slutt: "22:00"
@@ -690,6 +759,7 @@
   bilete: ""
   
 - uid: "kviss-2022-02"
+  slug: kviss-2022-januar-19
   dato: "2022-01-19"
   start: "20:00"
   slutt: "22:00"
@@ -700,6 +770,7 @@
   bilete: ""
   
 - uid: "kviss-2022-03"
+  slug: kviss-2022-januar-12
   dato: "2022-01-12"
   start: "20:00"
   slutt: "22:00"
@@ -710,6 +781,7 @@
   bilete: ""
   
 - uid: "pobb-2021-01"
+  slug: pobb-2021-oktober-6
   dato: "2021-10-06"
   start: "19:00"
   slutt: "23:45"
@@ -720,6 +792,7 @@
   bilete: "/lutar/bilete/gamal-cover.png" 
 
 - uid: "pobb-2021-02"
+  slug: pobb-2021-oktober-13
   dato: "2021-10-13"
   start: "19:00"
   slutt: "23:45"
@@ -730,6 +803,7 @@
   bilete: "/lutar/bilete/gamal-cover.png" 
   
 - uid: "pobb-2021-03"
+  slug: pobb-2021-oktober-20
   dato: "2021-10-20"
   start: "19:00"
   slutt: "23:45"
@@ -740,6 +814,7 @@
   bilete: "/lutar/bilete/gamal-cover.png" 
   
 - uid: "pobb-2021-04"
+  slug: pobb-2021-oktober-27
   dato: "2021-10-27"
   start: "19:00"
   slutt: "23:45"
@@ -750,6 +825,7 @@
   bilete: "/lutar/bilete/gamal-cover.png" 
   
 - uid: "pobb-2021-05"
+  slug: pobb-2021-november-3
   dato: "2021-11-03"
   start: "19:00"
   slutt: "23:45"
@@ -760,6 +836,7 @@
   bilete: "/lutar/bilete/gamal-cover.png" 
 
 - uid: "pobb-2021-06"
+  slug: pobb-2021-november-10
   dato: "2021-11-10"
   start: "19:00"
   slutt: "23:45"
@@ -770,6 +847,7 @@
   bilete: "/lutar/bilete/gamal-cover.png" 
   
 - uid: "pobb-2021-07"
+  slug: pobb-2021-november-17
   dato: "2021-11-17"
   start: "19:00"
   slutt: "23:45"
@@ -780,6 +858,7 @@
   bilete: "/lutar/bilete/gamal-cover.png" 
 
 - uid: "pobb-2021-08"
+  slug: pobb-2021-november-24
   dato: "2021-11-24"
   start: "19:00"
   slutt: "23:45"
@@ -790,6 +869,7 @@
   bilete: "/lutar/bilete/gamal-cover.png"
 
 - uid: pobb-2027-6da4d355936d5e160e0d73e38d8737e8
+  slug: pobb-2027-januar
   registrering_id: 6da4d355936d5e160e0d73e38d8737e8
   dato: '2027-01-27'
   start: '21:00'
@@ -800,6 +880,7 @@
     som speler frå 22:00–23:30 kjem etterkvart!
   bilete: /lutar/bilete/arr-cover.png
 - uid: pobb-2027-6da17b7ddb450cb4a4901057a1fd9992
+  slug: pobb-2027-februar
   registrering_id: 6da17b7ddb450cb4a4901057a1fd9992
   dato: '2027-02-24'
   start: '21:00'
@@ -810,6 +891,7 @@
     som speler frå 22:00–23:30 kjem etterkvart!
   bilete: /lutar/bilete/arr-cover.png
 - uid: pobb-2027-e6535ffb47e00b8ee77953b440137f23
+  slug: pobb-2027-mars
   registrering_id: e6535ffb47e00b8ee77953b440137f23
   dato: '2027-03-31'
   start: '21:00'
@@ -820,6 +902,7 @@
     som speler frå 22:00–23:30 kjem etterkvart!
   bilete: /lutar/bilete/arr-cover.png
 - uid: pobb-2027-ce2c8dcbcd78c48349637fa30b15f5e7
+  slug: pobb-2027-april
   registrering_id: ce2c8dcbcd78c48349637fa30b15f5e7
   dato: '2027-04-28'
   start: '21:00'
@@ -830,6 +913,7 @@
     som speler frå 22:00–23:30 kjem etterkvart!
   bilete: /lutar/bilete/arr-cover.png
 - uid: pobb-2027-cf04b36ddd9d046ee192d5d42d9f8541
+  slug: pobb-2027-mai
   registrering_id: cf04b36ddd9d046ee192d5d42d9f8541
   dato: '2027-05-26'
   start: '21:00'
@@ -841,6 +925,7 @@
   bilete: /lutar/bilete/arr-cover.png
 
 - uid: anna-2027-b25686c79e0d3219acc10148c58641ec
+  slug: aarsmote-2027
   registrering_id: b25686c79e0d3219acc10148c58641ec
   dato: '2027-02-24'
   start: '20:00'

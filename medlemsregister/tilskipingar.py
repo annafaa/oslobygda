@@ -8,6 +8,7 @@ import os
 import re
 import secrets
 import ssl
+import unicodedata
 from urllib.error import HTTPError, URLError
 from urllib.parse import quote, urlsplit
 from urllib.request import Request, build_opener, HTTPSHandler, HTTPRedirectHandler
@@ -32,6 +33,21 @@ class Conflict(CalendarError):
 class NoRedirect(HTTPRedirectHandler):
     def redirect_request(self, req, fp, code, msg, headers, newurl):
         return None
+
+
+MONTHS = ('januar', 'februar', 'mars', 'april', 'mai', 'juni',
+          'juli', 'august', 'september', 'oktober', 'november', 'desember')
+
+
+def event_slug(kind, day, title):
+    if kind != 'anna':
+        return f'{kind}-{day.year}-{MONTHS[day.month-1]}'
+    if 'årsmøte' in title.lower():
+        return f'aarsmote-{day.year}'
+    text = title.lower().replace('æ', 'ae').replace('ø', 'o').replace('å', 'aa')
+    text = unicodedata.normalize('NFKD', text).encode('ascii', 'ignore').decode()
+    name = re.sub(r'[^a-z0-9]+', '-', text).strip('-') or 'tilskiping'
+    return f'{name}-{day.year}'
 
 
 def validate_event(values, submission):
@@ -68,6 +84,7 @@ def validate_event(values, submission):
             (parts.scheme=='https' and parts.hostname and not parts.username and not parts.password)):
             raise ValueError('Lenkja må starte med / eller https://.')
     result={'uid':f'{kind}-{day.year}-{submission}', 'registrering_id':submission,
+            'slug':event_slug(kind, day, event['tittel']),
             'dato':day.isoformat(), 'start':start.strftime('%H:%M'), 'slutt':end.strftime('%H:%M'),
             'tittel':event['tittel'],'stad':event['stad'],'merknad':event['merknad'],'bilete':image}
     if end_day!=day:
@@ -136,13 +153,22 @@ class GithubCalendar:
             raise CalendarError('Kalenderdataa kunne ikkje lesast. Ingen endringar er lagra.') from None
 
     def create(self,event):
+        base_slug = event['slug']
         for attempt in range(3):
             raw,sha,events=self.read()
             old=next((e for e in events if e.get('registrering_id')==event['registrering_id'] or e['uid']==event['uid']),None)
             if old:
-                if old!=event:
+                if {k:v for k,v in old.items() if k!='slug'}!={k:v for k,v in event.items() if k!='slug'}:
                     raise Conflict('Innsendinga er allereie publisert med andre opplysningar. Opne eit nytt skjema.')
                 return False
+            event = dict(event)
+            base = base_slug
+            event['slug'] = base
+            used = {e.get('slug', e['uid']) for e in events} | {e['uid'] for e in events}
+            suffix = 2
+            while event['slug'] in used:
+                event['slug'] = f'{base}-{suffix}'
+                suffix += 1
             # Berre legg til: eksisterande kommentarar og formatering vert bevarte.
             updated=raw.rstrip()+'\n\n'+yaml.safe_dump([event],allow_unicode=True,sort_keys=False)
             try:

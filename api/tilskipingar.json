@@ -17,6 +17,7 @@ permalink: /api/tilskipingar.json
       {%- if es >= no and e.avlyst != true -%}
         {%- unless first -%},{%- endunless -%}
         {%- assign first = false -%}
+        {%- assign tilskipingsnamn = e.slug | default: e.uid -%}
         {
           "uid": {{ e.uid | default: "" | jsonify }},
           "dato": {{ e.dato | date: "%Y-%m-%d" | jsonify }},
@@ -24,7 +25,7 @@ permalink: /api/tilskipingar.json
           "slutt": {{ e.slutt | default: "" | jsonify }},
           "tittel": {{ e.tittel | default: "" | jsonify }},
           "stad": {{ e.stad | default: "" | jsonify }},
-          "lenkje": {{ "/tilskipingar/" | append: e.uid | append: "/" | absolute_url | jsonify }},
+          "lenkje": {{ "/tilskipingar/" | append: tilskipingsnamn | append: "/" | absolute_url | jsonify }},
           "merknad": {{ e.merknad | default: "" | jsonify }},
           "bilete": {{ e.bilete | default: "" | jsonify }}
         }

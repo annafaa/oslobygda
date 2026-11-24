@@ -18,6 +18,24 @@ class CalendarTests(unittest.TestCase):
         for change in ({'kind':'styret'},{'dato':'2026-02-30'},{'tittel':''},{'lenkje':'javascript:alert(1)'},{'lenkje':'//bad.example'},{'bilete':'https://bad.example/x.png'},{'sluttdato':'2026-11-17'}):
             with self.assertRaises(ValueError): self.event(**change)
 
+    def test_readable_urls(self):
+        self.assertEqual(self.event(dato='2027-01-27')['slug'], 'pobb-2027-januar')
+        self.assertEqual(self.event(kind='anna', tittel='Årsmøte i Oslobygda kulturlag', dato='2027-02-24')['slug'], 'aarsmote-2027')
+        self.assertEqual(self.event(kind='anna', tittel='Øving på lått!')['slug'], 'oving-paa-laatt-2026')
+
+    def test_url_collision_and_retry(self):
+        client=GithubCalendar('test-token')
+        event=self.event()
+        other={**event, 'uid':'other', 'registrering_id':'b'*32}
+        raw=yaml.safe_dump([other])
+        with patch.object(client,'read',return_value=(raw,'sha',[other])), patch.object(client,'api') as api:
+            self.assertTrue(client.create(event))
+            written=yaml.safe_load(base64.b64decode(api.call_args.args[1]['content']))[-1]
+            self.assertEqual(written['slug'], event['slug']+'-2')
+        with patch.object(client,'read',return_value=('', 'sha', [other,written])), patch.object(client,'api') as api:
+            self.assertFalse(client.create(event))
+            api.assert_not_called()
+
     def test_text_poster_without_image(self):
         self.assertEqual(self.event(bilete="")["bilete"], "")
 
@@ -58,6 +76,7 @@ class CalendarTests(unittest.TestCase):
             self.assertTrue(client.update(old['uid'],changed,fingerprint(old)))
             written=yaml.safe_load(base64.b64decode(api.call_args.args[1]['content']))
             self.assertEqual(written[0]['uid'],'pobb-2099-09')
+            self.assertEqual(written[0]['slug'],old['slug'])
             self.assertEqual(written[0]['registrering_id'],old['registrering_id'])
             self.assertFalse(written[0]['avlyst'])
             self.assertEqual(written[0]['tittel'],'Ny tittel')

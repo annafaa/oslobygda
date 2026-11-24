@@ -86,8 +86,8 @@ tilskipingsskjemaet. Då får kalenderkortet og tilskipingssida ei einsfarga
 plakatflate med tittelen i Fraunces. Årsmøte får kortteksten «Årsmøte».
 Tekstplakaten er HTML/CSS; ved deling blir det vanlege Oslobygda-biletet brukt.
 
-Kvar tilskiping har ei eiga side på `/tilskipingar/<uid>/`, til dømes
-`https://oslobygda.no/tilskipingar/pobb-2026-09/`. Bruk desse URL-ane ved
+Kvar tilskiping har ei eiga side på `/tilskipingar/<slug>/`, til dømes
+`https://oslobygda.no/tilskipingar/pobb-2027-januar/`. Bruk desse URL-ane ved
 innlegging i Aktiv i Oslo. Sidene inneheld synleg arrangementsinformasjon og
 Schema.org Event-data, og blir lenkja frå kalenderen og kalenderabonnementet.
 Innhaldet blir henta direkte frå `_data/kalender.yml` under Jekyll-bygginga.
@@ -96,6 +96,12 @@ Etter at du har lagt til nye tilskipingar, køyr `ruby skript/bygg_tilskipingssi
 GitHub Actions gjer dette automatisk ved endringar i kalenderdata på main.
 Behald dei små sidefilene i `tilskipingar/` i Git; dei fungerer med vanleg
 GitHub Pages utan eigne Jekyll-programtillegg.
+
+`slug` er det lesbare URL-namnet, til dømes `pobb-2027-januar` eller
+`aarsmote-2027`. Nye tilskipingar får dette automatisk; ved namnekollisjon
+blir det lagt til `-2`, `-3` osv. Behald `slug` ved redigering slik at lenkja
+er stabil. Alle eksisterande tilskipingar har òg fått lesbare namn. Dersom fleire
+tilskipingar har same type og månad, står dagen sist i namnet.
 
 Behald `uid` når ei tilskiping blir flytta eller endra; elles kan abonnentar
 få duplikat. Ved avlysing: behald rada og set `avlyst: true`. Behald historiske

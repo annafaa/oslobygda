@@ -110,7 +110,8 @@
     {% assign kortklasse = "kort kalenderkort" %}
     {% if es < no %}{% assign kortklasse = kortklasse | append: " kalenderkort--tidlegare" %}{% endif %}
 
-    {% assign tilskipingslenkje = "/tilskipingar/" | append: e.uid | append: "/" %}
+{% assign tilskipingsnamn = e.slug | default: e.uid %}
+    {% assign tilskipingslenkje = "/tilskipingar/" | append: tilskipingsnamn | append: "/" %}
     <div class="{{ kortklasse }}" data-event-uid="{{ e.uid | escape }}" data-event-start="{{ e.dato }}T{{ e.start | default: '19:00' }}" data-event-end="{{ sluttdato }}T{{ e.slutt | default: '22:00' }}">
       {% if e.uid %}
   <a class="kalenderkort__bilete-lenkje" href="{{ tilskipingslenkje | relative_url | escape }}">
